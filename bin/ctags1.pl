@@ -1,5 +1,14 @@
 #!perl
 
+=pod
+
+Usage:
+
+	perl ctags1.pl --language-force=markdown README.md
+	(默认由vim-taglist插件调用)
+
+=cut
+
 $g_cfg = {
 	#titleNo => 1
 };
