@@ -31,12 +31,13 @@
 安装要求：
 
 - vim 7+
-- vim taglist插件: ref/taglist.vim，可复制到vimfiles/plugin目录下; ref/ctags.exe，复制到可执行路径下。
 - perl 5.8+
 
 安装：
 
-- 复制vimfiles中的目录到vim插件目录。例如vim安装在`d:\vim`目录下，则一般插件目录为`d:\vim\vimfiles`。
+- 用vim打开发布的vmb文件, 用`:so %`安装。（其中包括了vim taglist插件，将被一起安装）
+  （旧方法是手工将vimfiles中文件复制到vim插件目录。例如vim安装在`d:\vim`目录下，则一般插件目录为`d:\vim\vimfiles`。）
+- 将ref/ctags.exe，复制到可执行路径下。
 - 将tool/ctags1.pl复制到可执行目录（假如复制到`d:\bat`为例，该目录已被加入系统缺省执行路径）
 
 以下配置加入vim主配置文件（如`d:\vim\_vimrc`文件），注意修改 Tlist_Ctags_Cmd一行的文件路径：

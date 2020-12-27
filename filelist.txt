@@ -1,0 +1,3 @@
+ftplugin/markdown.vim
+plugin/taglist.vim
+syntax/markdown.vim
