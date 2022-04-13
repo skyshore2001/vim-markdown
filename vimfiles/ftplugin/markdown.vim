@@ -22,6 +22,13 @@ endif
 function! MarkdownFold()
   let line = getline(v:lnum)
 
+  " 性能修改: 下面match操作很慢，先简单判断
+  if line[0] != '#'
+    return '='
+  endif
+  return '>' . match(line, '[^#]')
+  " 以下不用了
+
   " Regular headers
   let depth = match(line, '\(^#\+\)\@<=\( .*$\)\@=')
   if depth > 0
