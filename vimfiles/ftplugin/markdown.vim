@@ -26,7 +26,11 @@ function! MarkdownFold()
   if line[0] != '#'
     return '='
   endif
-  return '>' . match(line, '[^#]')
+  let n = match(line, '[^#]')
+  if line[n] != ' '
+  	return '='
+  endif
+  return '>' . n
   " 以下不用了
 
   " Regular headers
