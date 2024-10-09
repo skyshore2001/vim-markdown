@@ -27,7 +27,7 @@ function! MarkdownFold()
     return '='
   endif
   let n = match(line, '[^#]')
-  if line[n] != ' '
+  if line[n] != ' ' || line[n+1] == ' '
   	return '='
   endif
   return '>' . n
